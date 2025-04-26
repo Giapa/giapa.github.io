@@ -2,9 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giapa's Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
-<body>
-
+<body class="bg-gray-900 text-white">
+<div class="min-h-screen flex flex-col justify-center items-center p-4">
+    <header class="w-full max-w-4xl mb-8">
+        <h1 class="text-4xl font-bold text-center bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+            Gregory Giapantzis
+        </h1>
+        <p class="text-lg text-gray-300 text-center mt-2">
+            Web developer | Project Enthusiast
+        </p>
+        <div class="flex justify-center mt-4 space-x-4">
+            <a href="https://github.com/Giapa" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                GitHub
+            </a>
+            <a href="https://linkedin.com/in/giapa" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                LinkedIn
+            </a>
+        </div>
+    </header>
+    <main class="w-full max-w-4xl space-y-6">
+        <section class="glassmorphism p-6 rounded-xl shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 text-transparent bg-clip-text">About Me</h2>
+            <p class="text-gray-200">
+                Hello! I'm Gregory Giapantzis, a passionate software developer with a knack for creating web projects. My expertise lies in full-stack development, and I'm always eager to learn new technologies.
+            </p>
+        </section>
+        <section class="glassmorphism p-6 rounded-xl shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4 bg-gradient-to-r from-green-400 to-lime-400 text-transparent bg-clip-text">Projects</h2>
+            <div class="space-y-4">
+                <div class="border border-gray-700 rounded-md p-4">
+                    <h3 class="text-lg font-semibold text-purple-300">Vulnerawebity </h3>
+                    <p class="text-gray-200">
+                        Simple tool for checking web vulnerabilities. Built with Python.
+                    </p>
+                    <a href="https://github.com/Giapa/Vulnerawebity" target="_blank" class="text-blue-400 hover:text-blue-300 mt-2 inline-block">View Project</a>
+                </div>
+                <div class="border border-gray-700 rounded-md p-4">
+                    <h3 class="text-lg font-semibold text-purple-300">WodWide</h3>
+                    <p class="text-gray-200">
+                        An all-in-one crossfit platform. Written in Nuxt and Django.
+                    </p>
+                    <a href="https://github.com/WodWide" target="_blank" class="text-blue-400 hover:text-blue-300 mt-2 inline-block">View Project</a>
+                </div>
+            </div>
+        </section>
+        <section class="glassmorphism p-6 rounded-xl shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">CV</h2>
+            <p class="text-gray-200 mb-4">
+                You can download my CV here:
+            </p>
+            <a href="./Grigoris_Giapantzis.pdf" target="blank" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-3 rounded-full shadow-md transition duration-300 ease-in-out">
+                Download CV
+            </a>
+        </section>
+    </main>
+</div>
 </body>
 </html>
