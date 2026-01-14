@@ -1,78 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giapa's Personal Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio website showcasing skills, experience, and projects" />
+    <title>Giapa - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#ffffff',
+              foreground: '#0a0a0a',
+              muted: '#f5f5f5',
+              'muted-foreground': '#737373',
+              border: '#e5e5e5',
+            }
+          }
+        }
+      }
+    </script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .glassmorphism {
-            background: rgba(255, 255, 255, 0.06);
-            border-radius: 16px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+      html { scroll-behavior: smooth; }
+      #mobile-toggle { display: none; }
+      #mobile-toggle:checked ~ nav .mobile-menu { display: flex; }
+      #mobile-toggle:checked ~ nav .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+      #mobile-toggle:checked ~ nav .hamburger span:nth-child(2) { opacity: 0; }
+      #mobile-toggle:checked ~ nav .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
     </style>
-</head>
-<body class="bg-gray-900 text-white">
-<div class="min-h-screen flex flex-col justify-center items-center p-4">
-    <header class="w-full max-w-4xl mb-8">
-        <h1 class="text-4xl font-bold text-center bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
-            Gregory Giapantzis
-        </h1>
-        <p class="text-lg text-gray-300 text-center mt-2">
-            Web developer | Project Enthusiast
-        </p>
-        <div class="flex justify-center mt-4 space-x-4">
-            <a href="https://github.com/Giapa" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition duration-300">
-                GitHub
-            </a>
-            <a href="https://linkedin.com/in/giapa" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition duration-300">
-                LinkedIn
-            </a>
-        </div>
+  </head>
+  <body class="bg-background text-foreground antialiased">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur border-b border-border z-50">
+      <input type="checkbox" id="mobile-toggle" />
+      <nav class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="#" class="text-xl font-bold tracking-tight">Gregory Giapantzis</a>
+        
+        <ul class="hidden md:flex items-center gap-8">
+          <li><a href="#about" class="text-sm text-muted-foreground hover:text-foreground transition-colors">About</a></li>
+          <li><a href="#skills" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Skills</a></li>
+          <li><a href="#experience" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Experience</a></li>
+          <li><a href="#projects" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Projects</a></li>
+          <li><a href="#contact" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
+        </ul>
+
+        <label for="mobile-toggle" class="hamburger md:hidden cursor-pointer flex flex-col gap-1.5">
+          <span class="block w-6 h-0.5 bg-foreground transition-transform origin-center"></span>
+          <span class="block w-6 h-0.5 bg-foreground transition-opacity"></span>
+          <span class="block w-6 h-0.5 bg-foreground transition-transform origin-center"></span>
+        </label>
+
+        <ul class="mobile-menu hidden absolute top-16 left-0 right-0 bg-background border-b border-border flex-col p-6 gap-4">
+          <li><a href="#about" class="block text-muted-foreground hover:text-foreground transition-colors">About</a></li>
+          <li><a href="#skills" class="block text-muted-foreground hover:text-foreground transition-colors">Skills</a></li>
+          <li><a href="#experience" class="block text-muted-foreground hover:text-foreground transition-colors">Experience</a></li>
+          <li><a href="#projects" class="block text-muted-foreground hover:text-foreground transition-colors">Projects</a></li>
+          <li><a href="#contact" class="block text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    <main class="w-full max-w-4xl space-y-6">
-        <section class="glassmorphism p-6 rounded-xl shadow-lg">
-            <h2 class="text-2xl font-semibold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 text-transparent bg-clip-text">About Me</h2>
-            <p class="text-gray-200">
-                Hello! I'm Gregory Giapantzis, a passionate software developer with a knack for creating web projects. My expertise lies in full-stack development, and I'm always eager to learn new technologies.
-            </p>
-        </section>
-        <section class="glassmorphism p-6 rounded-xl shadow-lg">
-            <h2 class="text-2xl font-semibold mb-4 bg-gradient-to-r from-green-400 to-lime-400 text-transparent bg-clip-text">Projects</h2>
-            <div class="space-y-4">
-                <div class="border border-gray-700 rounded-md p-4">
-                    <h3 class="text-lg font-semibold text-purple-300">Vulnerawebity </h3>
-                    <p class="text-gray-200">
-                        Simple tool for checking web vulnerabilities. Built with Python.
-                    </p>
-                    <a href="https://github.com/Giapa/Vulnerawebity" target="_blank" class="text-blue-400 hover:text-blue-300 mt-2 inline-block">View Project</a>
-                </div>
-                <div class="border border-gray-700 rounded-md p-4">
-                    <h3 class="text-lg font-semibold text-purple-300">WodWide</h3>
-                    <p class="text-gray-200">
-                        An all-in-one crossfit platform. Written in Nuxt and Django.
-                    </p>
-                    <a href="https://github.com/WodWide" target="_blank" class="text-blue-400 hover:text-blue-300 mt-2 inline-block">View Project</a>
-                </div>
-            </div>
-        </section>
-        <section class="glassmorphism p-6 rounded-xl shadow-lg">
-            <h2 class="text-2xl font-semibold mb-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">CV</h2>
-            <p class="text-gray-200 mb-4">
-                You can download my CV here:
-            </p>
-            <a href="./Grigoris_Giapantzis.pdf" target="blank" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-3 rounded-full shadow-md transition duration-300 ease-in-out">
-                Download CV
+
+    <main class="pt-16">
+      <section id="about" class="min-h-[90vh] flex items-center py-20">
+        <div class="max-w-5xl mx-auto px-6">
+          <p class="text-muted-foreground mb-2">Hello, I'm</p>
+          <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4">Gregory Giapantzis</h1>
+          <h2 class="text-2xl md:text-3xl text-muted-foreground font-medium mb-6">Full Stack Developer</h2>
+          <p class="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
+            I like solving problems with code.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://github.com/Giapa" target="_blank" rel="noopener noreferrer" 
+               class="px-6 py-3 bg-foreground text-background font-medium rounded hover:bg-foreground/90 transition-colors">
+              GitHub
             </a>
-        </section>
+            <a href="mailto:giapa@protonmail.com" 
+               class="px-6 py-3 border border-border font-medium rounded hover:bg-muted transition-colors">
+              Email
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="py-20 bg-muted">
+        <div class="max-w-5xl mx-auto px-6">
+          <h2 class="text-3xl font-bold tracking-tight mb-12">Skills</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+              <h3 class="font-semibold mb-4 text-lg">Languages</h3>
+              <ul class="flex flex-wrap gap-2">
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">JavaScript</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">TypeScript</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Python</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-4 text-lg">Frontend</h3>
+              <ul class="flex flex-wrap gap-2">
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Vue</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">HTML/CSS</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Tailwind CSS</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-4 text-lg">Backend</h3>
+              <ul class="flex flex-wrap gap-2">
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Node.js</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Fastify</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">PostgreSQL</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">REST APIs</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-4 text-lg">Tools</h3>
+              <ul class="flex flex-wrap gap-2">
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Git</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Docker</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Linux</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">CI/CD</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="py-20">
+        <div class="max-w-5xl mx-auto px-6">
+          <h2 class="text-3xl font-bold tracking-tight mb-12">Experience</h2>
+          <div class="space-y-8">
+            <div class="relative pl-8 border-l-2 border-border pb-8">
+              <div class="absolute -left-2 top-0 w-4 h-4 bg-foreground rounded-full"></div>
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                <h3 class="text-xl font-semibold">Front End Engineer</h3>
+                <span class="text-sm text-muted-foreground">2021 - Present</span>
+              </div>
+              <p class="text-muted-foreground font-medium mb-2">Arx.net</p>
+              <p class="text-muted-foreground leading-relaxed">
+                Front end engineer for OPAP.SA website using Vue.js and Tailwind CSS.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="py-20 bg-muted">
+        <div class="max-w-5xl mx-auto px-6">
+          <h2 class="text-3xl font-bold tracking-tight mb-12">Projects</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-background border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h3 class="text-xl font-semibold mb-3">Orkosys</h3>
+              <p class="text-muted-foreground mb-4 leading-relaxed">
+                A web3 decentralized application for managing digital assets.
+              </p>
+              <ul class="flex flex-wrap gap-2 mb-4">
+                <li class="px-2 py-1 bg-muted text-xs rounded">Vue</li>
+                <li class="px-2 py-1 bg-muted text-xs rounded">Node.js</li>
+                <li class="px-2 py-1 bg-muted text-xs rounded">PostgreSQL</li>
+                <li class="px-2 py-1 bg-muted text-xs rounded">Fastify</li>
+              </ul>
+            </article>
+            <article class="bg-background border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h3 class="text-xl font-semibold mb-3">Kontroller</h3>
+              <p class="text-muted-foreground mb-4 leading-relaxed">
+                A mobile application for controlling e-reader devices.
+              </p>
+              <ul class="flex flex-wrap gap-2 mb-4">
+                <li class="px-2 py-1 bg-muted text-xs rounded">Kotlin</li>
+                <li class="px-2 py-1 bg-muted text-xs rounded">Jetpack Compose</li>
+              </ul>
+              <div class="flex gap-4 text-sm">
+                <a href="https://github.com/Giapa/Kontroller" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-foreground transition-colors">Source Code</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-20">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+          <h2 class="text-3xl font-bold tracking-tight mb-6">Get In Touch</h2>
+          <p class="text-lg text-muted-foreground max-w-lg mx-auto mb-8 leading-relaxed">
+            I'm currently open to new opportunities. Whether you have a question or just want to say hello, 
+            feel free to reach out!
+          </p>
+          <a href="mailto:giapa@protonmail.com" 
+             class="inline-block px-8 py-4 bg-foreground text-background font-medium rounded hover:bg-foreground/90 transition-colors">
+            Say Hello
+          </a>
+        </div>
+      </section>
     </main>
-</div>
-</body>
+  </body>
 </html>
