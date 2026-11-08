@@ -66,7 +66,7 @@
         <div class="max-w-5xl mx-auto px-6">
           <p class="text-muted-foreground mb-2">Hello, I'm</p>
           <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4">Gregory Giapantzis</h1>
-          <h2 class="text-2xl md:text-3xl text-muted-foreground font-medium mb-6">Full Stack Developer</h2>
+          <h2 class="text-2xl md:text-3xl text-muted-foreground font-medium mb-6">Full Stack &amp; AI Engineer</h2>
           <p class="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
             I like solving problems with code.
           </p>
@@ -78,6 +78,10 @@
             <a href="mailto:giapa@protonmail.com" 
                class="px-6 py-3 border border-border font-medium rounded hover:bg-muted transition-colors">
               Email
+            </a>
+            <a href="Grigoris_Giapantzis.pdf" target="_blank" rel="noopener noreferrer"
+               class="px-6 py-3 border border-border font-medium rounded hover:bg-muted transition-colors">
+              CV
             </a>
           </div>
         </div>
@@ -108,7 +112,9 @@
               <ul class="flex flex-wrap gap-2">
                 <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Node.js</li>
                 <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Fastify</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">FastAPI</li>
                 <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">PostgreSQL</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">SQLite</li>
                 <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">REST APIs</li>
               </ul>
             </div>
@@ -119,6 +125,27 @@
                 <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Docker</li>
                 <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Linux</li>
                 <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">CI/CD</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-4 text-lg">AI</h3>
+              <ul class="flex flex-wrap gap-2">
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">LLMs</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">AI Agents</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">RAG</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">LangChain</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Embeddings</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Semantic Search</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-4 text-lg">Testing</h3>
+              <ul class="flex flex-wrap gap-2">
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Playwright</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Cypress</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Selenium</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Jest</li>
+                <li class="px-3 py-1 bg-background border border-border rounded-full text-sm">Vitest</li>
               </ul>
             </div>
           </div>
@@ -132,12 +159,23 @@
             <div class="relative pl-8 border-l-2 border-border pb-8">
               <div class="absolute -left-2 top-0 w-4 h-4 bg-foreground rounded-full"></div>
               <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                <h3 class="text-xl font-semibold">Front End Engineer</h3>
-                <span class="text-sm text-muted-foreground">2021 - Present</span>
+                <h3 class="text-xl font-semibold">Lead Front End Engineer</h3>
+                <span class="text-sm text-muted-foreground">June 2021 - Present</span>
               </div>
-              <p class="text-muted-foreground font-medium mb-2">Arx.net</p>
+              <p class="text-muted-foreground font-medium mb-2">Allwyn</p>
               <p class="text-muted-foreground leading-relaxed">
-                Front end engineer for OPAP.SA website using Vue.js and Tailwind CSS.
+                Lead front end development for Self Service Betting Terminals (SSBTs) in Allwyn stores, using Vue.js and TypeScript. Lead three developers and two QA engineers across delivery, production support, and coordination with product and design.
+              </p>
+            </div>
+            <div class="relative pl-8 border-l-2 border-border pb-8">
+              <div class="absolute -left-2 top-0 w-4 h-4 bg-foreground rounded-full"></div>
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                <h3 class="text-xl font-semibold">Full Stack Engineer</h3>
+                <span class="text-sm text-muted-foreground">November 2025 - June 2026</span>
+              </div>
+              <p class="text-muted-foreground font-medium mb-2">Orkosys</p>
+              <p class="text-muted-foreground leading-relaxed">
+                Designed and implemented a digital inheritance application with Vue.js, TypeScript, a Fastify REST API, and PostgreSQL. Led frontend architecture, state management, and user experience implementation, applying clean architecture and domain-driven design across frontend and backend layers.
               </p>
             </div>
           </div>
@@ -149,31 +187,33 @@
           <h2 class="text-3xl font-bold tracking-tight mb-12">Projects</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <article class="bg-background border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h3 class="text-xl font-semibold mb-3">Orkosys</h3>
+              <h3 class="text-xl font-semibold mb-3">Spoiless</h3>
               <p class="text-muted-foreground mb-4 leading-relaxed">
-                A web3 decentralized application for managing digital assets.
+                An experimental local-first EPUB reading companion for questions and recaps based on completed chapters.
               </p>
               <ul class="flex flex-wrap gap-2 mb-4">
                 <li class="px-2 py-1 bg-muted text-xs rounded">Vue</li>
-                <li class="px-2 py-1 bg-muted text-xs rounded">Node.js</li>
-                <li class="px-2 py-1 bg-muted text-xs rounded">PostgreSQL</li>
-                <li class="px-2 py-1 bg-muted text-xs rounded">Fastify</li>
-              </ul>
-            </article>
-            <article class="bg-background border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h3 class="text-xl font-semibold mb-3">Kontroller</h3>
-              <p class="text-muted-foreground mb-4 leading-relaxed">
-                A mobile application for controlling e-reader devices.
-              </p>
-              <ul class="flex flex-wrap gap-2 mb-4">
-                <li class="px-2 py-1 bg-muted text-xs rounded">Kotlin</li>
-                <li class="px-2 py-1 bg-muted text-xs rounded">Jetpack Compose</li>
+                <li class="px-2 py-1 bg-muted text-xs rounded">TypeScript</li>
+                <li class="px-2 py-1 bg-muted text-xs rounded">Python</li>
+                <li class="px-2 py-1 bg-muted text-xs rounded">FastAPI</li>
+                <li class="px-2 py-1 bg-muted text-xs rounded">SQLite</li>
               </ul>
               <div class="flex gap-4 text-sm">
-                <a href="https://github.com/Giapa/Kontroller" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-foreground transition-colors">Source Code</a>
+                <a href="https://github.com/Giapa/Spoiless" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-foreground transition-colors">Source Code</a>
               </div>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section id="education" class="py-20">
+        <div class="max-w-5xl mx-auto px-6">
+          <h2 class="text-3xl font-bold tracking-tight mb-12">Education</h2>
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+            <h3 class="text-xl font-semibold">BSc in Computer Science</h3>
+            <span class="text-sm text-muted-foreground">Graduated 2024</span>
+          </div>
+          <p class="text-muted-foreground font-medium">International Hellenic University</p>
         </div>
       </section>
 
